@@ -1,0 +1,77 @@
+\documentclass[a4paper,11pt]{book}
+% 你好
+% twocolumn
+% \usepackage{CJK}
+
+\usepackage{comment}
+\usepackage{verbatim}
+\usepackage[hyperref]{ctex}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{geometry}
+\usepackage{listings}
+% \usepackage{mathabx}
+
+%\usepackage{xcolor}
+%\usepackage{setspace}
+
+\hypersetup{bookmarksopen=true}
+
+% 完成标题配置，可以做得更好看些么?
+\begin{titlepage}
+\title{Latex Cookbook}
+\author{Jack}
+\date{2011.8.10}
+\end{titlepage}
+
+% 该语句不能放在document标签内部
+\includeonly{c1_latex_study}
+
+\begin{document}
+% A4格式中, maketile命令必须放在document中
+    \maketitle
+    % 右对齐必须在document环境下使用
+    \begin{flushright}
+        QQ:2690963222\\
+        Tel:.......\\
+        Email:j2eemave@gmail.comls
+    \end{flushright}
+
+    This is an example. Latex is very interesting!
+    %可以列具体的目录
+    %\begin{CJK*}{GBK}{song}
+    中文显示,LaTex的优势在于良好的输出控制，劣势在于输入比较麻烦。
+    不过数量之后，这些可能都不是问题。Latex可以让用户专注于内容本身么?
+    %\end{CJK*}
+   % 以强调方式显示文字.
+   Hello World \raisebox{1.5ex}[10pt]{nice} emphasize.
+   %如何添加一个段落呢?
+   \par
+   %\begin{CJK*}{GBK}{song}
+   段落分隔显示
+   %\end{CJK*}
+   \begin{comment}
+    hello world,宏包名称和下面的编辑命令并不是完全对应的， {comment}命令，并不是使用 comment宏包，而是用到了一个叫verbatim的宏包
+    comment可以实现多行注释
+
+   如何生成索引呢?即PDF导航栏
+   这个不叫索引，而叫书签，加载 hyperref包，会自动生成书签
+   \end{comment}
+% \setcounter{secnumdepth}{-1}
+\setcounter{chapter}{-1}
+   \chapter{Chaos and Order}
+   %\begin{CJK*}{GBK}{song}
+   \par 
+   \par 
+   %\end{CJK*}
+
+   % 第一章后面为什么有一个空页
+   % include的文件中不能包含documentclass, \begin{document},usepackage等命令
+
+
+   \newcounter{chapter_num}
+   % include命令所包含的文件名中不能包括空格
+%   \include{c16_Research_Teams}
+
+\end{document} 
